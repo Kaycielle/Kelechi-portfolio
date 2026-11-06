@@ -94,8 +94,10 @@ a{color:#1f5fbf}a:hover{color:#174a96}
 <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 64px; padding-top: 32px; border-top: 1px solid #e6e8ec">
 <a href="./" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 10px; border: 1.5px solid #c9ccd2; color: #121417; font-weight: 600; font-size: 16px; text-decoration: none">← Back to portfolio</a>
 <a href="mailto:ukanwakelechi1@gmail.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 26px; border-radius: 10px; background: #1f5fbf; color: #ffffff; font-weight: 600; font-size: 16px; text-decoration: none">Email me</a>
+<button type="button" class="copy-email" data-email="ukanwakelechi1@gmail.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 20px; border-radius: 10px; border: 0; background: transparent; color: #1f5fbf; font: inherit; font-weight: 600; font-size: 16px; cursor: pointer">Copy email</button>
 </div>
 </article>
 </div>
+<script>document.querySelectorAll(".copy-email").forEach(function(b){b.addEventListener("click",function(){var e=b.getAttribute("data-email"),t=b.textContent;function done(){b.textContent="Copied: "+e;setTimeout(function(){b.textContent=t},2500)}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(e).then(done,function(){window.prompt("Copy my email:",e)})}else{window.prompt("Copy my email:",e)}})})</script>
 </body>
 </html>
